@@ -1,0 +1,18 @@
+services:
+  cf-kv-updater:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: cf-kv-updater
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - CF_ACCOUNT_ID=08e093954032c162eda657de3c4c2e8b
+      - CF_KV_NAMESPACE_ID=050787dfb54442a898078ccae9675c3f
+      - CF_API_TOKEN=cfut_EfoudVuqO6mHo0itwJdBAOGh1WYWWJHlM7bSRGOXd1a5f582
+      - CF_KV_KEY=PREFERRED_ADDR
+      - TOP_NODES_COUNT=8
+      # 設定每天 16:00 執行 (標準 Cron 表達式: 分 時 日 月 週)
+      - CRON_SCHEDULE=0 16 * * *
+    volumes:
+      - /etc/localtime:/etc/localtime:ro

@@ -1,0 +1,5 @@
+store.ubi.com:443#育碧商城
+serviceshub.samsclub.com:443#山姆會員
+www.allianz.com:443#安聯集團
+www.decathlon.com:443#迪卡儂
+www.asda.com:443#阿斯達
