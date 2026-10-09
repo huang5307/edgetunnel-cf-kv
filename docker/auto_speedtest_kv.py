@@ -101,7 +101,7 @@ def parse_and_merge_results() -> str:
             for line in lines[1:TOP_NODES_COUNT + 1]:
                 parts = line.split(",")
                 ip = parts[0]
-                port = parts[1] if len(parts) > 1 else "443"
+                port = "443"  # Cloudflare CDN HTTPS 標準端口
                 speed = parts[5] if len(parts) > 5 else "優選"
                 payload_nodes.append(f"{ip}:{port}#家用優選-{speed}MB")
         except Exception as e:
