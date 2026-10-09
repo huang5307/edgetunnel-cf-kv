@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 直接複製倉庫內建的測速核心並賦予執行權限
-COPY CloudflareST .
+ADD CloudflareST_linux_amd64.tar.gz .
 RUN chmod +x CloudflareST
 
 # 複製執行腳本與配置
