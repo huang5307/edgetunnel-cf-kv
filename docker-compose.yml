@@ -7,9 +7,9 @@ services:
     restart: unless-stopped
     network_mode: host
     environment:
-      - CF_ACCOUNT_ID=08e093954032c162eda657de3c4c2e8b
-      - CF_KV_NAMESPACE_ID=050787dfb54442a898078ccae9675c3f
-      - CF_API_TOKEN=cfut_EfoudVuqO6mHo0itwJdBAOGh1WYWWJHlM7bSRGOXd1a5f582
+      - CF_ACCOUNT_ID=CF账号
+      - CF_KV_NAMESPACE_ID=填自己的
+      - CF_API_TOKEN=cfut_填自己的
       - CF_KV_KEY=PREFERRED_ADDR
       - TOP_NODES_COUNT=8
       # 設定每天 16:00 執行 (標準 Cron 表達式: 分 時 日 月 週)
