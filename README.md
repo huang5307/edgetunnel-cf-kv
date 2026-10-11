@@ -1,4 +1,4 @@
-# EdgeTunnel on Cloudflare Workers (動態 KV 優選版)
+# 自動優選IP保存到KV EdgeTunnel on Cloudflare Workers (動態 KV 優選版)
 
 基於 Cloudflare Workers 的輕量級 VLESS over WebSocket 代理轉發伺服器，支援從 Workers KV 動態讀取最新優選節點與自動生成訂閱。
 
